@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+// import styled from 'styled-components'
+// import { Button } from '@mui/material'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import {
+//   faTwitter,
+//   faDiscord,
+//   faInstagram
+// } from '@fortawesome/free-brands-svg-icons'
 
-function App() {
+import './app.css'
+import LandingPage from './components/LandingPage/LandingPage';
+import Roadmap from './components/Roadmap/Roadmap'
+import TheForest from './components/TheForest/TheForest'
+import KrewBrew from './components/KrewBrew/KrewBrew'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<LandingPage/>}/>
+        <Route path='/roadmap' element={<Roadmap/>}/>
+        <Route path='/theforest' element={<TheForest/>}/>
+        <Route path='/krewbrew' element={<KrewBrew/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
