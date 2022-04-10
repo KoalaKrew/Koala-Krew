@@ -9,7 +9,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 //   faInstagram
 // } from '@fortawesome/free-brands-svg-icons'
 
-import './app.css'
+import './App.css'
 import LandingPage from './components/LandingPage/LandingPage';
 import Roadmap from './components/Roadmap/Roadmap'
 import TheForest from './components/TheForest/TheForest'
