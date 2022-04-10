@@ -23,7 +23,7 @@ import RedBG from '../../assets/forest_data/Background/RedBG.png'
 import YellowBG from '../../assets/forest_data/Background/YellowBG.png'
 
 import Cyan from '../../assets/forest_data/Base Koala/Cyan.png'
-import Blue from '../../assets/forest_data/Base Koala/Blue.png'
+import Blue from '../../assets/forest_data/Base Koala/newBlue.png'
 import Brown from '../../assets/forest_data/Base Koala/Brown.png'
 import Dark from '../../assets/forest_data/Base Koala/Dark.png'
 import DarkGreen from '../../assets/forest_data/Base Koala/DarkGreen.png'

@@ -19,13 +19,6 @@ const IdeationData = [
     {
         id: '1',
         // category: 'Marketing',
-        title: 'Hello World!',
-        short_description1: '1. Making our social media debut and kick-starting our marketing campaign.',
-        // in_charge: TehBing
-    },
-    {
-        id: '1',
-        // category: 'Marketing',
         title: 'Mint',
         short_description1: '1. 5000 Koalas are now open for mint! Join the Koala Krew.',
         short_description2: 'Mint Price: 1.5 SOL',
@@ -44,41 +37,37 @@ const IdeationData = [
         id: '1',
         // category: 'Marketing',
         title: 'Krew Brew Execution Begins',
-        short_description1: '1. On ____ UTC (a week after mint), every holder will be invited to our exclusive DAO. ',
+        short_description1: '1. Sourcing of Krew Brew warehouses and finalizing the supply chain process.',
+        short_description2: '2. KrewBrewDAO engaged to finalize bottle/can designs and distribution plans. We want to position ourselves as the first NFT-linked beverage',
         // in_charge: TehBing
     },
     {
         id: '1',
         // category: 'Marketing',
         title: 'Launching Krew Brew',
-        short_description1: '1. On ____ UTC (a week after mint), every holder will be invited to our exclusive DAO. ',
+        short_description1: '1. Krew Brew warehouse ready to receive our first batch of inventories.',
+        short_description2: '2. Distribution intermediaries finalized & Online store set-up',
+        short_description3: '3. Traditional and New Media Marketing (Influencers, Conventional Media Ads)',
         // in_charge: TehBing
     },
-    {
-        id: '1',
-        // category: 'Marketing',
-        title: 'Giving Back',
-        short_description1: '1. On ____ UTC (a week after mint), every holder will be invited to our exclusive DAO. ',
-        // in_charge: TehBing
-    },
-    {
-        id: '1',
-        // category: 'Marketing',
-        title: 'Krew Brew taking over the world!',
-        short_description1: '1. On ____ UTC (a week after mint), every holder will be invited to our exclusive DAO. ',
-        // in_charge: TehBing
-    }
+    // {
+    //     id: '1',
+    //     // category: 'Marketing',
+    //     title: 'Krew Brew taking over the world!',
+    //     short_description1: '1. On ____ UTC (a week after mint), every holder will be invited to our exclusive DAO. ',
+    //     // in_charge: TehBing
+    // }
 ]
  
-// doing_data = [
-//     {
-//         status: 'Doing',
-//         category: 'Development',
-//         title: 'Hello World!',
-//         short_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.',
-//         in_charge: 'KopiBing'
-//     }
-// ]
+const doing_data = [
+    {
+        id: '1',
+        // category: 'Marketing',
+        title: 'Hello World!',
+        short_description1: '1. Making our social media debut and kick-starting our marketing campaign.',
+        // in_charge: TehBing
+    },
+]
 
 const completed_data = [
     {
@@ -285,6 +274,23 @@ const Roadmap = () => {
                         
                         <Content>
                             <h2 style={{width: '93%', margin: '1rem auto 1rem', color: '#d9d9d9'}}>Doing</h2>
+                            {doing_data.map((data) => {
+                                return (
+                                    <Div>
+                                        {/* <Category>{data.category}</Category> */}
+                                        <h2 style={{margin: '4px 0px 6px', color: 'black'}}>{data.title}</h2>
+                                        <p style={{fontSize: '15px', color: 'black'}}>{data.short_description1}</p>
+                                        <p style={{fontSize: '15px', color: 'black', marginTop: '0.4rem'}}>{data.short_description2}</p>
+                                        <p style={{fontSize: '15px', color: 'black', marginTop: '0.4rem'}}>{data.short_description3}</p>
+                                        <p style={{fontSize: '15px', color: 'black', marginTop: '0.4rem'}}>{data.short_description4}</p>
+                                        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: '10px'}}>
+                                            {/* <p><FontAwesomeIcon icon={faSquare} style={{color: 'white', border: 'solid 1px black'}}/></p> */}
+                                            {/* <p style={{fontSize: '15px'}}>13 Feb 2022</p> */}
+                                            {/* <img src={data.in_charge} alt='TehBing' style={{borderRadius: '50%', height: '40px', width: '40px'}} /> */}
+                                        </div>
+                                    </Div>
+                                )
+                            })}
                         </Content>
                         
                         <Content>
