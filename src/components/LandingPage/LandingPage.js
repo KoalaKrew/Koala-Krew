@@ -48,6 +48,7 @@ font-size: 16px;
 const MainImage = styled.img`
 opacity: 0.6;
 width: 100%;
+margin: auto;
 `
 
 const Links = styled.div`
@@ -61,8 +62,8 @@ margin-bottom: 2rem;
 `
 
 const FAQ = styled.div`
-width: 100%;
-margin: 6rem 0rem 0rem
+width: 90%;
+margin: 6rem auto 0rem
 `
 
 const Team = styled.div`
@@ -81,9 +82,20 @@ justify-content: space-around;
 `
 
 const FamPic = styled.img`
-width: 200px;
-height: 200px;
+width: 160px;
+height: 160px;
 border-radius: 15%;
+`
+
+const MobileLinks = styled.div`
+width: 90%;
+margin: auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 40vh;
+margin-bottom: 2rem;
 `
 
 const styling = {
@@ -96,9 +108,10 @@ const styling = {
     mobileContent: {
         display: 'flex',
         flexDirection: 'column',
-        margin: '0rem 0rem 4rem',
+        margin: '0rem auto 4rem',
         lineHeight: '25px',
-        width: '100%'
+        width: '90%',
+        textAlign: 'center'
     }
 }
 
@@ -118,10 +131,10 @@ const introduction = {
         width: '55%',
     },
     mobileContainer: {
-        width: '100%',
+        width: '90%',
         display: 'flex',
         flexDirection: 'column',
-        margin: '4rem auto 4rem'
+        margin: '5rem auto 5rem'
     },
     mobileContent: {
         width: '100%',
@@ -173,20 +186,25 @@ const countdown = {
     mobileContainer: {
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-around',
         alignItems: 'center',
         height: '10rem',
         backgroundColor: '#c74a98',
         color: 'black',
         margin: '0rem auto 4rem',
+        width: '100%'
     },
     mobileTop: {
-        fontSize: '1.8rem'
+        fontSize: '1.5em',
+        width: '95%',
+        margin: 'auto',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
     },
     mobileInformation: {
         width: '70%',
         margin: 'auto',
-        fontSize: '14px',
+        fontSize: '12px',
         fontWeight: 'bold',
         display: 'flex',
         justifyContent: 'space-between',
@@ -196,7 +214,7 @@ const countdown = {
         padding: '9px 18px',
         backgroundColor: 'black',
         color: '#b81f7f',
-        margin: '0 rem auto 0rem',
+        margin: '0rem auto 1.5rem',
         textDecoration: 'none',
         borderRadius: '4px'
     }
@@ -235,10 +253,11 @@ const perks = {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        margin: '0rem 0rem 4rem'
+        margin: '5rem 0rem 5rem'
     },
     mobileContent: {
         display: 'flex',
+        width: '95%',
         flexDirection: 'row',
         justifyContent: 'space-between',
         textAlign: 'center',
@@ -280,7 +299,7 @@ const team = {
 }
 
 const MobileContainer = styled.div`
-width: 80%;
+width: 100%;
 margin: auto;
 
 `
@@ -622,7 +641,7 @@ const LandingPage = () => {
                                 <p style={{marginBottom: '0.8rem', fontSize: '18px'}}>Join discord for our latest updates!</p>
                                 <Button><FontAwesomeIcon icon={faDiscord}/>Discord</Button>
                             </div>
-                            <div style={{marginTop: '2rem'}}>
+                            <div style={{marginTop: '2.5rem'}}>
                                 <ReactPlayer 
                                 url={Video1}
                                 loop = 'true'
@@ -650,7 +669,7 @@ const LandingPage = () => {
 
                     {/* Content for "Learn More" */}
                     <div style={styling.mobileContent}>
-                        <h1 style={{textAlign: 'center', marginBottom: '1.5rem', color: '#95befc'}}>About Us</h1>
+                        <h1 style={{textAlign: 'center', marginBottom: '2rem', color: '#95befc'}}>About Us</h1>
                         <div style={{width: '100%'}}>
                             <h1 style={{fontSize: '22px', marginBottom: '0.8rem'}} id='learn-more'>Owning a Koala!</h1>
                             <p>Each Koala will be available for mint at 1.5 SOL, regardless of pre-sale
@@ -691,7 +710,7 @@ const LandingPage = () => {
                             <div style={perks.mobileContent}>
                                 <div style={perks.mobileIndividual}>
                                     <img style={perks.image} src={koala1} alt=''></img>
-                                    <p>A nice Koala PFP to <br/>flex on your friends!</p>
+                                    <p>Nice Koala PFP to <br/>flex on your friends!</p>
                                 </div>
                                 <div style={perks.mobileIndividual}>
                                     {/* <img style={perks.image} src={koala1} alt=''></img> */}
@@ -800,15 +819,15 @@ const LandingPage = () => {
 
 
                     {/* Links */}
-                    <Links>
+                    <MobileLinks>
                         <h1 style={{marginBottom: '0.8rem', color: '#95befc'}}>Still have questions?</h1>
                         <p>Join our discord now follow our socials to look for the answers!</p>
-                        <div style={{marginTop: '1.5rem', width: '80%', display: 'flex', justifyContent: 'space-between'}}>
+                        <div style={{marginTop: '1.5rem', width: '100%', display: 'flex', justifyContent: 'space-between'}}>
                             <Button style={{backgroundColor: 'white'}} href='#'><FontAwesomeIcon icon={faDiscord}/> Discord</Button>
                             <Button style={{backgroundColor: 'white'}} href='#'><FontAwesomeIcon icon={faTwitter}/> Twitter</Button>
                             <Button style={{backgroundColor: 'white'}} href='#'><FontAwesomeIcon icon={faInstagram}/> Instagram</Button>
                         </div>
-                    </Links>
+                    </MobileLinks>
 
                 </MobileContainer>
                 <Footer/>
