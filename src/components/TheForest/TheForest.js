@@ -163,7 +163,7 @@ import YellowBeanie from '../../assets/forest_data/Headwear/YellowBeanie.png'
 
 import Airpods from '../../assets/forest_data/Ears/Airpods.png'
 import Earcuffs from '../../assets/forest_data/Ears/Earcuffs.png'
-import Earstud from '../../assets/forest_data/Ears/Earstud.png'
+import Earstud from '../../assets/forest_data/Ears/EarStud.png'
 import EarstudsAndCuffs from '../../assets/forest_data/Ears/EarstudsAndCuffs.png'
 import Earrings from '../../assets/forest_data/Ears/Earrings.png'
 import EarringsAndCuffs from '../../assets/forest_data/Ears/EarringsAndCuffs.png'
