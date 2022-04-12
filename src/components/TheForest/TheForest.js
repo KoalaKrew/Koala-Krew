@@ -23,9 +23,9 @@ import RedBG from '../../assets/forest_data/Background/RedBG.png'
 import YellowBG from '../../assets/forest_data/Background/YellowBG.png'
 
 import Cyan from '../../assets/forest_data/Base Koala/Cyan.png'
-import Blue from '../../assets/forest_data/Base Koala/newBlue.png'
+import Blue from '../../assets/forest_data/Base Koala/Blue.png'
 import Brown from '../../assets/forest_data/Base Koala/Brown.png'
-import Dark from '../../assets/forest_data/Base Koala/Dark.png'
+import DarkBlue from '../../assets/forest_data/Base Koala/DarkBlue.png'
 import DarkGreen from '../../assets/forest_data/Base Koala/DarkGreen.png'
 import DarkPurple from '../../assets/forest_data/Base Koala/DarkPurple.png'
 import DarkRed from '../../assets/forest_data/Base Koala/DarkRed.png'
@@ -44,7 +44,6 @@ import BlackEyes from '../../assets/forest_data/Eyes/Black.png'
 import Blindfold from '../../assets/forest_data/Eyes/Blindfold.png'
 import BloodshotEyes from '../../assets/forest_data/Eyes/BloodshotEyes.png'
 import BlueEyes from '../../assets/forest_data/Eyes/Blue.png'
-import CensoredEyes from '../../assets/forest_data/Eyes/CensoredEyes.png'
 import Charon_sObol from '../../assets/forest_data/Eyes/Charon_sObol.png'
 import ClosedEyes from '../../assets/forest_data/Eyes/ClosedEyes.png'
 import DemonicEyes from '../../assets/forest_data/Eyes/DemonicEyes.png'
@@ -68,7 +67,6 @@ import YellowEyes from '../../assets/forest_data/Eyes/Yellow.png'
 
 import Angel from '../../assets/forest_data/Outfit/Angel.png'
 import BikerJacket from '../../assets/forest_data/Outfit/BikerJacket.png'
-import CensoredOutfit from '../../assets/forest_data/Outfit/Censored.png'
 import Decomposing from '../../assets/forest_data/Outfit/Decomposing.png'
 import Demon from '../../assets/forest_data/Outfit/Demon.png'
 import Chiton from '../../assets/forest_data/Outfit/Chiton.png'
@@ -112,7 +110,6 @@ import YellowSinglet from '../../assets/forest_data/Outfit/YellowSinglet.png'
 import BaseMouth from '../../assets/forest_data/Mouth/BaseMouth.png'
 import BleedingMouth from '../../assets/forest_data/Mouth/BleedingMouth.png'
 import Brace from '../../assets/forest_data/Mouth/Brace.png'
-import CensoredMouth from '../../assets/forest_data/Mouth/CensoredMouth.png'
 import Charon_sObolMouth from '../../assets/forest_data/Mouth/Charon_sObol.png'
 import DemonicMouth from '../../assets/forest_data/Mouth/DemonicMouth.png'
 import GoldGrilles from '../../assets/forest_data/Mouth/GoldGrilles.png'
@@ -232,8 +229,8 @@ const koala_asset = [
         rarityScore: 'xx'
     },
     {
-        img: Dark,
-        name: 'Dark',
+        img: DarkBlue,
+        name: 'Dark Blue',
         rarityScore: 'xx'
     },
     {
@@ -312,11 +309,6 @@ const eyes_asset = [
     {
         img: BloodshotEyes,
         name: 'Bloodshot',
-        rarityScore: 'xx'
-    },
-    {
-        img: CensoredEyes,
-        name: 'Censored',
         rarityScore: 'xx'
     },
     {
@@ -440,11 +432,6 @@ const outfit_asset = [
     {
         img: BikerJacket,
         name: 'Biker Jacket',
-        rarityScore: 'xx'
-    },
-    {
-        img: CensoredOutfit,
-        name: 'Censored',
         rarityScore: 'xx'
     },
     {
@@ -658,11 +645,6 @@ const mouth_asset = [
     {
         img: Brace,
         name: 'Brace',
-        rarityScore: 'xx'
-    },
-    {
-        img: CensoredMouth,
-        name: 'Censored',
         rarityScore: 'xx'
     },
     {
@@ -924,8 +906,8 @@ const styling = {
         margin: '10px 0px                                                          '
     },
     image: {
-        width: '80px',
-        height: '80px',
+        width: '100px',
+        height: '100px',
         backgroundColor: '#212121'
     }
 }
