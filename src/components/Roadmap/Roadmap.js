@@ -98,7 +98,7 @@ margin: auto;
 
 const Box = styled.div`
 width: 100%;
-margin: 1rem auto 5rem;
+margin: 1rem auto 8rem;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-gap: 1rem;

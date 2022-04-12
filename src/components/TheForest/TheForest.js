@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -160,7 +161,13 @@ import RedBeanie from '../../assets/forest_data/Headwear/RedBeanie.png'
 import WhiteBeanie from '../../assets/forest_data/Headwear/WhiteBeanie.png'
 import YellowBeanie from '../../assets/forest_data/Headwear/YellowBeanie.png'
 
-import EarStud from '../../assets/forest_data/Ears/EarStud.png'
+import Airpods from '../../assets/forest_data/Ears/Airpods.png'
+import Earcuffs from '../../assets/forest_data/Ears/Earcuffs.png'
+import Earstud from '../../assets/forest_data/Ears/Earstud.png'
+import EarstudsAndCuffs from '../../assets/forest_data/Ears/EarstudsAndCuffs.png'
+import Earrings from '../../assets/forest_data/Ears/Earrings.png'
+import EarringsAndCuffs from '../../assets/forest_data/Ears/EarringsAndCuffs.png'
+
 
 
 const background_asset = [
@@ -894,8 +901,35 @@ const headwear_asset = [
 
 const ears_asset = [
     {
-        img: EarStud,
-    }
+        img: Airpods,
+        name: 'Airpods',
+        rarityScore: 'xx'
+    },
+    {
+        img: Earstud,
+        name: 'Ear Stud',
+        rarityScore: 'xx'
+    },
+    {
+        img: Earcuffs,
+        name: 'Ear Cuffs',
+        rarityScore: 'xx'
+    },
+    {
+        img: Earrings,
+        name: 'Earrings',
+        rarityScore: 'xx'
+    },
+    {
+        img: EarringsAndCuffs,
+        name: 'Earrings and Cuffs',
+        rarityScore: 'xx'
+    },
+    {
+        img: EarstudsAndCuffs,
+        name: 'Ear Studs and Cuffs',
+        rarityScore: 'xx'
+    },
 ]
 
 const styling = {
@@ -915,7 +949,7 @@ const styling = {
 const Section = styled.div`
 display: grid;
 grid-template-columns: 1fr 1fr;
-grid-gap: 15rem;
+grid-gap: 10rem;
 width: 80%;
 margin: auto;
 font-size: 18px;
@@ -923,21 +957,24 @@ font-weight: light;
 `
 
 const MobileSection = styled.div`
-display: grid;
-grid-template-column: 1fr;
-width: 50%;
-margin: auto;
-grid-gap: 6rem;
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 100%;
+padding-right: 2.2rem;
+padding-left: 2.2rem;
+gap: 3rem;
+margin-bottom: 4rem;
 `
 
 const Container = styled.div`
 width: 85%;
-margin: 0rem auto 3rem;
+margin: 0rem auto 0rem;
 `
 
 const MobileContainer = styled.div`
-width: 75%;
-margin: 0rem auto 3rem;
+width: 85%;
+margin: 0rem auto 0rem;
 `
 
 const Content = styled.div`
@@ -953,6 +990,16 @@ width: 100%;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+margin: 1rem auto 3rem;
+padding: 1rem 5%;
+background-color: #272725;
+border-radius: 5px;
+`
+
+const MobileNavigation = styled.div`
+width: 100%;
+display: flex;
+flex-direction: column;
 margin: 1rem auto 3rem;
 padding: 1rem 5%;
 background-color: #272725;
@@ -1182,8 +1229,8 @@ const TheForest = () => {
                             })}
                         </div>
 
-                        <div>
-                            <h2 id='background' style={{color: '#E349AA'}}>Ears</h2>
+                        <div style={{marginBottom: '3rem'}}>
+                            <h2 id='ears' style={{color: '#E349AA'}}>Ears</h2>
                             <div style={styling.heading}>
                                 <p>Name</p>
                                 <p>Rarity Score</p>
@@ -1202,6 +1249,7 @@ const TheForest = () => {
                         </div>
     
                     </Section>
+                    <Footer/>
                 </Container>
             </Fragment>
         )
@@ -1216,15 +1264,19 @@ const TheForest = () => {
                     {open && <FontAwesomeIcon icon={faTimes} onClick={closeNavbar}/>}
                 </MobileNavContainer>
                 <MobileContainer>
-                    <Navigation>
-                        <a href='#basekoala' style={{textDecoration: 'none', color: 'white'}}>Base Koala</a>
-                        <a href='#headwear' style={{textDecoration: 'none', color: 'white'}}>Headwear</a>
-                        <a href='#outfit' style={{textDecoration: 'none', color: 'white'}}>Outfit</a>
-                        <a href='#ears' style={{textDecoration: 'none', color: 'white'}}>Ears</a>
-                        <a href='#eyes' style={{textDecoration: 'none', color: 'white'}}>Eyes</a>
-                        <a href='#mouth' style={{textDecoration: 'none', color: 'white'}}>Mouth</a>
-                        <a href='#background' style={{textDecoration: 'none', color: 'white'}}>Background</a>
-                    </Navigation>
+                    <MobileNavigation>
+                        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
+                            <a href='#basekoala' style={{textDecoration: 'none', color: 'white'}}>Base Koala</a>
+                            <a href='#headwear' style={{textDecoration: 'none', color: 'white'}}>Headwear</a>
+                            <a href='#outfit' style={{textDecoration: 'none', color: 'white'}}>Outfit</a>
+                            <a href='#ears' style={{textDecoration: 'none', color: 'white'}}>Ears</a>
+                        </div>
+                        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-around', marginTop: '1.5rem'}}>
+                            <a href='#eyes' style={{textDecoration: 'none', color: 'white'}}>Eyes</a>
+                            <a href='#mouth' style={{textDecoration: 'none', color: 'white'}}>Mouth</a>
+                            <a href='#background' style={{textDecoration: 'none', color: 'white'}}>Background</a>
+                        </div>
+                    </MobileNavigation>
                     <MobileSection>
                         {/* Background Section*/}
                         <div>
@@ -1285,7 +1337,7 @@ const TheForest = () => {
                         </div>
     
                         <div>
-                            <h2 style={{color: '#E349AA'}}>Mouth</h2>
+                            <h2 id='mouth' style={{color: '#E349AA'}}>Mouth</h2>
                             <div style={styling.heading}>
                                 <p>Name</p>
                                 <p>Rarity Score</p>
@@ -1340,8 +1392,28 @@ const TheForest = () => {
                                 )
                             })}
                         </div>
+
+                        <div>
+                            <h2 id='ears' style={{color: '#E349AA'}}>Ears</h2>
+                            <div style={styling.heading}>
+                                <p>Name</p>
+                                <p>Rarity Score</p>
+                            </div>
+                            {ears_asset.map((data) => {
+                                return (
+                                    <Content>
+                                        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '10px'}}>
+                                            <img src={data.img} alt='Cyan' style={styling.image}/>
+                                            <p>{data.name}</p>
+                                        </div>
+                                        <span>{data.rarityScore}</span>
+                                    </Content>
+                                )
+                            })}
+                        </div>
     
                     </MobileSection>
+                    <Footer/>
                 </MobileContainer>
             </Fragment>
         )
